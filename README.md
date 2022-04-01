@@ -1,2 +1,4 @@
 # BUAA-CO-2021
-The code of Computer Organization
+北航2021秋季计算机组成课设代码，已通过P7
+
+**请勿抄袭，课程组最后会查重**

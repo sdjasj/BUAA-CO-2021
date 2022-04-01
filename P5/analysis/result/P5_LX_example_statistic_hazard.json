@@ -1,0 +1,124 @@
+{
+    "forward_valid_ratio": 1.0,
+    "forward_count": 3,
+    "stall_count": 1,
+    "forward_coverage": 0.028037383177570093,
+    "stall_coverage": 0.06666666666666667,
+    "grade": {
+        "forward": {
+            "average": 7.011494252873564,
+            "warning": [
+                "cal_rr <~~ cal_rr",
+                "cal_rr <~~ load",
+                "cal_rr <~~ jal",
+                "cal_ri <~~ cal_rr",
+                "cal_ri <~~ cal_ri",
+                "cal_ri <~~ load",
+                "cal_ri <~~ lui",
+                "cal_ri <~~ jal",
+                "br_r2 <~~ cal_ri",
+                "br_r2 <~~ load",
+                "br_r2 <~~ lui",
+                "br_r2 <~~ jal",
+                "load <~~ cal_rr",
+                "load <~~ cal_ri",
+                "load <~~ load",
+                "load <~~ lui",
+                "load <~~ jal",
+                "store <~~ cal_rr",
+                "store <~~ cal_ri",
+                "store <~~ load",
+                "store <~~ lui",
+                "store <~~ jal",
+                "jr <~~ cal_rr",
+                "jr <~~ cal_ri",
+                "jr <~~ load",
+                "jr <~~ jal"
+            ],
+            "details": {
+                "cal_rr <~~ cal_rr": 0,
+                "cal_rr <~~ cal_ri": 66.66666666666667,
+                "cal_rr <~~ load": 0,
+                "cal_rr <~~ lui": 66.66666666666667,
+                "cal_rr <~~ jal": 0,
+                "cal_ri <~~ cal_rr": 0,
+                "cal_ri <~~ cal_ri": 0,
+                "cal_ri <~~ load": 0,
+                "cal_ri <~~ lui": 0,
+                "cal_ri <~~ jal": 0,
+                "br_r2 <~~ cal_rr": 70.0,
+                "br_r2 <~~ cal_ri": 0,
+                "br_r2 <~~ load": 0,
+                "br_r2 <~~ lui": 0,
+                "br_r2 <~~ jal": 0,
+                "load <~~ cal_rr": 0,
+                "load <~~ cal_ri": 0,
+                "load <~~ load": 0,
+                "load <~~ lui": 0,
+                "load <~~ jal": 0,
+                "store <~~ cal_rr": 0,
+                "store <~~ cal_ri": 0,
+                "store <~~ load": 0,
+                "store <~~ lui": 0,
+                "store <~~ jal": 0,
+                "jr <~~ cal_rr": 0,
+                "jr <~~ cal_ri": 0,
+                "jr <~~ load": 0,
+                "jr <~~ jal": 0
+            }
+        },
+        "stall": {
+            "average": 8.0,
+            "warning": [
+                "cal_rr <~~ load",
+                "cal_ri <~~ load",
+                "br_r2 <~~ cal_ri",
+                "br_r2 <~~ load",
+                "load <~~ load",
+                "store <~~ load",
+                "jr <~~ cal_rr",
+                "jr <~~ cal_ri",
+                "jr <~~ load"
+            ],
+            "details": {
+                "cal_rr <~~ load": 0,
+                "cal_ri <~~ load": 0,
+                "br_r2 <~~ cal_rr": 80.0,
+                "br_r2 <~~ cal_ri": 0,
+                "br_r2 <~~ load": 0,
+                "load <~~ load": 0,
+                "store <~~ load": 0,
+                "jr <~~ cal_rr": 0,
+                "jr <~~ cal_ri": 0,
+                "jr <~~ load": 0
+            }
+        }
+    },
+    "forward": [
+        {
+            "src_instr": "addu",
+            "dst_instr": "beq",
+            "src_stage": "M",
+            "dst_stage": "D"
+        },
+        {
+            "src_instr": "lui",
+            "dst_instr": "addu",
+            "src_stage": "E",
+            "dst_stage": "D"
+        },
+        {
+            "src_instr": "ori",
+            "dst_instr": "addu",
+            "src_stage": "M",
+            "dst_stage": "E"
+        }
+    ],
+    "stall": [
+        {
+            "d_instr": "beq",
+            "cause": "addu",
+            "interval": 0
+        }
+    ]
+}

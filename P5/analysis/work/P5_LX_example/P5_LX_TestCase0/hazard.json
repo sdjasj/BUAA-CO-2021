@@ -1,0 +1,155 @@
+{
+    "forwarding": [
+        {
+            "valid": true,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00003f3f"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003008",
+                    "instr": "beq $2, $2, 2"
+                },
+                "e": {
+                    "pc": "0x00003004",
+                    "instr": "addu $2, $1, $1"
+                },
+                "m": {
+                    "pc": "0x00003000",
+                    "instr": "ori $1, $0, 0x3f3f"
+                },
+                "w": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 1,
+                "old": {
+                    "stage": "e",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00003f3f"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003008",
+                    "instr": "beq $2, $2, 2"
+                },
+                "e": {
+                    "pc": "0x00003004",
+                    "instr": "addu $2, $1, $1"
+                },
+                "m": {
+                    "pc": "0x00003000",
+                    "instr": "ori $1, $0, 0x3f3f"
+                },
+                "w": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 2,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00007e7e"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003008",
+                    "instr": "beq $2, $2, 2"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x00003004",
+                    "instr": "addu $2, $1, $1"
+                },
+                "w": {
+                    "pc": "0x00003000",
+                    "instr": "ori $1, $0, 0x3f3f"
+                }
+            }
+        },
+        {
+            "valid": true,
+            "forward": {
+                "reg": 2,
+                "old": {
+                    "stage": "d",
+                    "value": "0x00000000"
+                },
+                "new": {
+                    "stage": "m",
+                    "value": "0x00007e7e"
+                }
+            },
+            "view": {
+                "d": {
+                    "pc": "0x00003008",
+                    "instr": "beq $2, $2, 2"
+                },
+                "e": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                },
+                "m": {
+                    "pc": "0x00003004",
+                    "instr": "addu $2, $1, $1"
+                },
+                "w": {
+                    "pc": "0x00003000",
+                    "instr": "ori $1, $0, 0x3f3f"
+                }
+            }
+        }
+    ],
+    "stalling": [
+        {
+            "cause": "e",
+            "view": {
+                "d": {
+                    "pc": "0x00003008",
+                    "instr": "beq $2, $2, 2"
+                },
+                "e": {
+                    "pc": "0x00003004",
+                    "instr": "addu $2, $1, $1"
+                },
+                "m": {
+                    "pc": "0x00003000",
+                    "instr": "ori $1, $0, 0x3f3f"
+                },
+                "w": {
+                    "pc": "0x00000000",
+                    "instr": "nop"
+                }
+            }
+        }
+    ]
+}

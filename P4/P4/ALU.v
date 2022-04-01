@@ -1,0 +1,51 @@
+`timescale 1ns / 1ps
+
+`define ADD 0
+`define SUB 1
+`define OR 2
+`define AND 3
+`define LUI 4
+`define SLL 5
+`define SLTI 6
+
+
+module ALU(
+    input [31:0] A,
+    input [31:0] B,
+    input [3:0] ALUOP,
+	 input [4:0] SHAMT,
+    output [4:0] Zero,
+    output reg [31:0] ALUOUT
+    );
+    // aluout
+	always @(*) begin
+        if (ALUOP==`ADD) begin
+            ALUOUT = A+B;
+        end
+        else if (ALUOP==`SUB) begin
+            ALUOUT = A - B;
+        end
+        else if (ALUOP==`OR) begin
+            ALUOUT = A|B;
+        end
+        else if (ALUOP==`AND) begin
+            ALUOUT = A&B;
+        end
+        else if (ALUOP==`LUI) begin
+            ALUOUT = B<<16;
+        end
+		  else if (ALUOP==`SLL) begin
+			   ALUOUT = B<<SHAMT;
+		  end
+        else if (ALUOP==`SLTI) begin
+            ALUOUT = ($signed(A)<$signed(B))?32'd1:32'd0;
+        end
+    end
+
+    //zero
+    assign Zero[0] = A==B;//beq
+    assign Zero[1] = $signed(A) >= 0 ; //bgez
+    assign Zero[2] = 0;
+    assign Zero[3] = 0;
+    assign Zero[4] = 0;	 
+endmodule
